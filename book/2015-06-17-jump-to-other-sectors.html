@@ -1,0 +1,540 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>4.跳出第一个扇区 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="windmissing">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex-plus/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-click-reveal/click_reveal.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="2015-06-15-load-sectors.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"windmissing/baby_os","types":["star","watch","fork"],"size":"small"};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="2012-06-16-my-os-windows.html">
+            
+                <a href="2012-06-16-my-os-windows.html">
+            
+                    
+                    在bochs上运行的第一个操作系统（Windows版）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="2013-05-26-my-os-linux-operation-effect.html">
+            
+                <a href="2013-05-26-my-os-linux-operation-effect.html">
+            
+                    
+                    1.最简单的操作系统（linux版）（一）运行效果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="2013-05-15-my-os-development-env.html">
+            
+                <a href="2013-05-15-my-os-development-env.html">
+            
+                    
+                    开发环境说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="2015-05-15-my-os-makefile.html">
+            
+                <a href="2015-05-15-my-os-makefile.html">
+            
+                    
+                    1.最简单的操作系统（二）makefile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="2015-05-16-my-os-linker.html">
+            
+                <a href="2015-05-16-my-os-linker.html">
+            
+                    
+                    1.最简单的操作系统（三）链接脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="2015-05-16-my-os-boot.html">
+            
+                <a href="2015-05-16-my-os-boot.html">
+            
+                    
+                    1.最简单的操作系统（四）boot.S
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="2015-06-08-more-logs.html">
+            
+                <a href="2015-06-08-more-logs.html">
+            
+                    
+                    2.多一些打印
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="2015-06-15-load-sectors.html">
+            
+                <a href="2015-06-15-load-sectors.html">
+            
+                    
+                    3.加载其它扇区
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.10" data-path="2015-06-17-jump-to-other-sectors.html">
+            
+                <a href="2015-06-17-jump-to-other-sectors.html">
+            
+                    
+                    4.跳出第一个扇区
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >4.跳出第一个扇区</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x80CC;&#x666F;&#xFF1A;
+&#x4E0A;&#x6587;&#x8BB2;&#x5230;&#xFF0C;&#x628A;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x6324;&#x5230;&#x4E00;&#x4E2A;&#x6247;&#x533A;&#x91CC;&#x9762;&#x5B9E;&#x5728;&#x662F;&#x592A;&#x59D4;&#x66F2;&#x4E86;&#x3002;&#x6240;&#x4EE5;&#x8981;&#x8DF3;&#x51FA;&#x7B2C;&#x4E00;&#x4E2A;&#x6247;&#x533A;&#x7684;&#x9650;&#x5236;&#x3002;
+&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;&#x5C31;&#x662F;&#xFF1A;
+&#xFF08;1&#xFF09;&#x628A;&#x90E8;&#x5206;&#x4EE3;&#x7801;&#x653E;&#x5230;&#x5176;&#x5B83;&#x6247;&#x533A;
+&#xFF08;2&#xFF09;&#x52A0;&#x8F7D;&#x5176;&#x5B83;&#x6247;&#x533A;&#x5230;&#x5185;&#x5B58;
+&#xFF08;3&#xFF09;&#x8DF3;&#x8F6C;&#x5230;&#x5176;&#x5B83;&#x6247;&#x533A;&#x4E2D;&#x8981;&#x8FD0;&#x884C;&#x7684;&#x7B2C;&#x4E00;&#x6761;&#x6307;&#x4EE4;
+&#x5728;3&#x4E2D;&#x5DF2;&#x7ECF;&#x5B9E;&#x73B0;&#x4E86;&#x7B2C;&#xFF08;2&#xFF09;&#x6B65;&#xFF0C;&#x52A0;&#x8F7D;&#x6247;&#x533A;2-18&#x81F3;&#x5185;&#x5B58;0x9000:0x1000&#x5904;&#xFF0C;&#x8FD9;&#x4E00;&#x8282;&#x5C06;&#x4ECB;&#x7ECD;&#xFF08;1&#xFF09;&#x548C;&#xFF08;3&#xFF09;</p>
+<p>&#x9700;&#x6C42;&#xFF1A;
+1.&#x5199;&#x4E00;&#x6BB5;&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#xFF0C;&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#x4E2D;&#x5305;&#x542B;&#x6253;&#x5370;&#x4FE1;&#x606F;&#xFF08;&#x7B2C;&#x4E00;&#x884C;&#x5C4F;&#x5E55;&#x4E2D;&#x95F4;&#x6253;&#x5370;&#x2018;A&#x2019;&#xFF09;&#xFF0C;&#x53EF;&#x4EE5;&#x660E;&#x786E;&#x77E5;&#x9053;&#x8BE5;&#x4EE3;&#x7801;&#x662F;&#x5426;&#x6267;&#x884C;&#x5230;&#x4E86;
+2.&#x4FEE;&#x6539;makefile&#xFF0C;&#x4F7F;&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#x7ECF;&#x8FC7;&#x7F16;&#x8BD1;&#x3001;&#x94FE;&#x63A5;&#xFF0C;&#x6700;&#x7EC8;&#x653E;&#x5165;img&#x4E2D;&#x4ECE;&#x7B2C;&#x4E8C;&#x4E2A;&#x6247;&#x533A;&#x5F00;&#x59CB;&#x7684;&#x4F4D;&#x7F6E;
+3.&#x4FEE;&#x6539;boot.S&#xFF0C;&#x5728;&#x52A0;&#x8F7D;&#x5B8C;&#x5176;&#x5B83;&#x6247;&#x533A;&#x540E;&#xFF0C;&#x4E3B;&#x52A8;&#x8DF3;&#x8F6C;&#x5230;&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#x7684;&#x7B2C;&#x4E00;&#x6761;&#x6307;&#x4EE4;&#xFF0C;&#x5E76;&#x6267;&#x884C;&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#x3002;</p>
+<p>&#x8FD0;&#x884C;&#x6548;&#x679C;&#xFF1A;
+<img src="assets/5" alt=""></p>
+<p>&#x4EE3;&#x7801;&#xFF1A;
+boot.S&#x4EE3;&#x7801;&#x4FEE;&#x6539;&#x53CA;&#x8BF4;&#x660E;&#xFF1A;
+&#x7B2C;1&#x5904;&#x4FEE;&#x6539;&#xFF1A;
+<img src="assets/6" alt=""></p>
+<p>&#x4FEE;&#x6539;&#x4E0A;&#x4E00;&#x8282;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;BUG&#x3002;
+&#x4E24;&#x4E2A;&#x503C;&#x76F8;&#x52A0;&#x7684;&#x540C;&#x65F6;&#x628A;&#x7ED3;&#x679C;&#x5B58;&#x5165;&#x5BC4;&#x5B58;&#x5668;&#x4F1A;&#x5BFC;&#x81F4;&#x7F16;&#x8BD1;&#x5931;&#x8D25;&#x3002;
+&#x5E94;&#x8BE5;&#x5148;&#x628A;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x503C;&#x5B58;&#x5165;&#x5BC4;&#x5B58;&#x5668;&#xFF0C;&#x7136;&#x540E;&#x8BA9;&#x5BC4;&#x5B58;&#x5668;&#x52A0;&#x53E6;&#x4E00;&#x4E2A;&#x503C;&#x3002;</p>
+<p>&#x7B2C;2&#x5904;&#x4FEE;&#x6539;&#xFF1A;
+<img src="assets/7" alt="">  </p>
+<p>&#x6839;&#x636E;&#x4E0A;&#x6587;&#x5DF2;&#x77E5;&#xFF0C;2-18&#x6247;&#x533A;&#x7684;&#x6570;&#x636E;&#x5DF2;&#x7ECF;&#x8BFB;&#x5165;&#x5230;&#x5185;&#x5B58;&#x4E0A;&#x4ECE;0x9000:0x0100&#x5F00;&#x59CB;&#x7684;&#x4F4D;&#x7F6E;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x76F4;&#x63A5;&#x8DF3;&#x8F6C;&#x5230;&#x8FD9;&#x4E2A;&#x4F4D;&#x7F6E;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;</p>
+<p>&#x7B2C;3&#x5904;&#x4FEE;&#x6539;&#xFF1A;
+<img src="assets/8" alt=""></p>
+<p>&#x6B64;&#x5904;&#x7701;&#x7565;N&#x884C;
+<img src="assets/9" alt=""></p>
+<p>&#x628A;BaseOfLoader&#x548C;OffsetOfLoader&#x7684;&#x5B9A;&#x4E49;&#x79FB;&#x5230;&#x6700;&#x524D;&#x9762;&#x53BB;&#x4E86;&#xFF0C;&#x5426;&#x5219;jmp <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>B</mi><mi>a</mi><mi>s</mi><mi>e</mi><mi>O</mi><mi>f</mi><mi>L</mi><mi>o</mi><mi>a</mi><mi>d</mi><mi>e</mi><mi>r</mi><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">BaseOfLoader,</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mord mathit">a</span><span class="mord mathit">s</span><span class="mord mathit">e</span><span class="mord mathit" style="margin-right:0.02778em;">O</span><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mord mathit">L</span><span class="mord mathit">o</span><span class="mord mathit">a</span><span class="mord mathit">d</span><span class="mord mathit">e</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mpunct">,</span></span></span></span>OffsetOfLoader&#x4F1A;&#x63D0;&#x793A;&#x9519;&#x8BEF;&#x3002;
+&#x4F46;&#x662F;&#x6307;&#x4EE4;&#x662F;&#x4ECE;&#x4E0A;&#x5F80;&#x4E0B;&#x6267;&#x884C;&#x7684;&#x3002;&#x771F;&#x6B63;&#x7684;&#x7B2C;&#x4E00;&#x6761;&#x53EF;&#x6267;&#x884C;&#x6307;&#x4EE4;&#x662F;mov %cs, %ax&#x8FD9;&#x53E5;&#xFF0C;&#x4E3A;&#x4E86;&#x80FD;&#x6B63;&#x786E;&#x627E;&#x5230;&#x7B2C;&#x4E00;&#x6761;&#x6307;&#x4EE4;&#xFF0C;&#x5728;.set&#x7684;&#x524D;&#x9762;&#x52A0;&#x4E86;&#x4E00;&#x53E5;&#x8DF3;&#x8F6C;&#x3002;</p>
+<p>makefile&#x4EE3;&#x7801;&#x4FEE;&#x6539;&#x53CA;&#x8BF4;&#x660E;
+&#x7B2C;1&#x5904;&#x4FEE;&#x6539;&#xFF1A;
+<img src="assets/10" alt=""></p>
+<p>&#x65B0;&#x589E;&#x52A0;&#x4E00;&#x4E2A;&#x94FE;&#x63A5;&#x811A;&#x672C;&#x6587;&#x4EF6;&#xFF0C;&#x56E0;&#x4E3A;&#x9700;&#x6C42;&#x4E2D;&#x8BF4;&#x660E;&#x8981;&#x65B0;&#x5199;&#x4E00;&#x4E2A;&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#xFF0C;&#x8FD9;&#x4E2A;&#x94FE;&#x63A5;&#x811A;&#x672C;&#x6587;&#x4EF6;&#x5C31;&#x662F;&#x7ED9;&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#x4F7F;&#x7528;&#x7684;&#x3002;
+&#x4E3A;&#x4E86;&#x8868;&#x793A;&#x533A;&#x5206;&#xFF0C;&#x540C;&#x65F6;&#x5C06;&#x539F;&#x811A;&#x672C;&#x6587;&#x4EF6;&#x5B9A;&#x4E49;&#x4E3A;LDFILE_BOOT</p>
+<p>&#x7B2C;2&#x5904;&#x4FEE;&#x6539;&#xFF1A;
+<img src="assets/11" alt=""></p>
+<p>&#x8FD9;&#x4E00;&#x90E8;&#x5206;&#x6CA1;&#x6709;&#x505A;&#x4EC0;&#x4E48;&#x5B9E;&#x8D28;&#x6027;&#x7684;&#x4FEE;&#x6539;&#xFF0C;&#x53EA;&#x662F;&#x628A;&#x4EE3;&#x7801;&#x548C;&#x6CE8;&#x91CA;&#x79FB;&#x4E86;&#x4E00;&#x4E0B;&#x4F4D;&#x7F6E;&#x3002;</p>
+<p>&#x7B2C;3&#x4FEE;&#x6539;&#xFF1A;
+<img src="assets/12" alt="">
+&#x6B64;&#x5904;&#x589E;&#x52A0;&#x4E86;&#x53E6;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;loader.S&#x7684;&#x7F16;&#x8BD1;&#x94FE;&#x63A5;&#x8FC7;&#x7A0B;&#x3002;
+loader.S&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x7684;&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#x3002;
+loader.S&#x7684;&#x7F16;&#x8BD1;&#x94FE;&#x63A5;&#x548C;boot.S&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x53EA;&#x662F;&#x7528;&#x7684;&#x94FE;&#x63A5;&#x811A;&#x672C;&#x4E0D;&#x4E00;&#x6837;&#x3002;</p>
+<p>&#x7B2C;4&#x5904;&#x4FEE;&#x6539;&#xFF1A;
+<img src="assets/13" alt="">
+&#x7B2C;1&#x4E2A;&#x6247;&#x533A;&#x4ECD;&#x7136;&#x662F;&#x5B58;&#x653E;boot.bin
+&#x7B2C;2-13&#x4E2A;&#x6247;&#x533A;&#x5B58;&#x653E;&#x7684;&#x662F;loader.bin
+&#x5269;&#x4F59;2866&#x4E2A;&#x6247;&#x533A;&#x4ECD;&#x7136;&#x4E3A;&#x7A7A;</p>
+<p>&#x7B2C;5&#x5904;&#x4FEE;&#x6539;&#xFF1A;
+<img src="assets/14" alt=""></p>
+<p>&#x8FD9;&#x4E2A;makefile&#x6587;&#x4EF6;&#x6539;&#x597D;&#x4EE5;&#x540E;&#xFF0C;&#x5F88;&#x957F;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x5185;&#x4E0D;&#x4F1A;&#x518D;&#x53BB;&#x4FEE;&#x6539;&#x5B83;&#x4E86;&#x3002;</p>
+<p>&#x65B0;&#x589E;&#x4EE3;&#x7801;loader.S&#x8BF4;&#x660E;
+&#x5B8C;&#x6574;&#x6E90;&#x7801;&#xFF1A;</p>
+<pre><code>.code16
+.text
+    mov     %cs, %ax
+    mov     %ax, %ds
+    mov     %ax, %es
+    mov     %ax, %ss
+
+    mov     {% math_inline %}0xb800, %ax
+    mov     %ax, %gs
+    mov     {% endmath_inline %}0xA, %ah
+    mov     {% math_inline %}&apos;A&apos;, %al
+    mov     %ax, %gs:((80*0+39)*2)
+
+    jmp     .
+</code></pre><p>&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;&#xFF1A;</p>
+<pre><code>    mov     %cs, %ax
+    mov     %ax, %ds
+</code></pre><p>&#x6B64;&#x5904;&#x7684;%cs&#x5DF2;&#x7ECF;&#x4E0D;&#x662F;0&#x4E86;&#xFF0C;&#x800C;&#x662F;0x9000&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x7684;&#x4EE3;&#x7801;&#x6BB5;&#x3002;
+&#x5728;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x4EE3;&#x7801;&#x6BB5;&#x548C;&#x6570;&#x636E;&#x6BB5;&#x4ECD;&#x7136;&#x5C5E;&#x4E8E;&#x540C;&#x4E00;&#x4E2A;&#x6BB5;&#xFF0C;&#x56E0;&#x6B64;&#x4E5F;&#x8981;&#x628A;%ds&#x8BBE;&#x7F6E;&#x4E3A;0x9000&#x3002;
+&#x4E0D;&#x8FC7;&#x5176;&#x5B9E;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x5728;&#x4ECA;&#x5929;&#x7684;&#x5E94;&#x7528;&#x4E2D;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x6570;&#x636E;&#x90FD;&#x662F;&#x7ACB;&#x5373;&#x6570;&#xFF0C;&#x5E76;&#x6CA1;&#x6709;&#x7528;&#x5230;&#x6570;&#x636E;&#x6BB5;&#xFF0C;&#x540C;&#x6837;&#x4E5F;&#x6CA1;&#x6709;&#x7528;&#x5230;%es&#x548C;%ss&#xFF0C;&#x4E0D;&#x5199;&#x4E5F;&#x6CA1;&#x6709;&#x5173;&#x7CFB;&#x3002;
+&#x4F46;&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x4EE5;&#x540E;&#x7528;&#x5230;&#x4E86;&#x5BFC;&#x81F4;&#x4EE3;&#x7801;&#x51FA;&#x9519;&#xFF0C;&#x8FD9;&#x91CC;&#x5148;&#x52A0;&#x4E0A;&#x4E86;&#x3002;</p>
+<pre><code>    mov     {% endmath_inline %}0xb800, %ax
+    mov     %ax, %gs
+    mov     {% math_inline %}0xA, %ah
+    mov     {% endmath_inline %}&apos;A&apos;, %al
+    mov     %ax, %gs:((80*0+39)*2)
+</code></pre><p>&#x8FD9;&#x4E00;&#x6BB5;&#x662F;&#x7528;&#x4E8E;&#x5728;&#x5C4F;&#x5E55;&#x4E0A;&#x663E;&#x793A;&#x5B57;&#x7B26;&#x7684;&#xFF0C;&#x4F7F;&#x7528;&#x4E86;&#x4E0E;boot.S&#x4E2D;&#x4E0D;&#x540C;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x95EE;&#xFF1A;&#x600E;&#x6837;&#x663E;&#x793A;&#x5B57;&#x7B26;&#xFF1F;
+&#x7B54;&#xFF1A;&#x5C4F;&#x5E55;&#x6587;&#x4EF6;&#x5B57;&#x7B26;&#x663E;&#x793A;&#x7684;&#x7F13;&#x51B2;&#x533A;&#x4F4D;&#x7F6E;&#x5185;&#x5B58;&#x7269;&#x7406;&#x5730;&#x5740;0xb8000-0xb8fff&#x7684;&#x533A;&#x95F4;&#x5185;&#x3002;&#x5176;&#x4E2D;0xb8000&#x548C;0xb8001&#x5206;&#x522B;&#x5B58;&#x653E;&#x7684;&#x662F;&#x5DE6;&#x4E0A;&#x89D2;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x7684;&#x989C;&#x8272;&#x503C;&#x548C;ASCII&#x503C;&#x3002;
+&#x6211;&#x4EEC;&#x6240;&#x91C7;&#x7528;&#x7684;&#x663E;&#x793A;&#x5B57;&#x7B26;&#x65B9;&#x6CD5;&#x5C31;&#x662F;&#xFF1A;&#x628A;&#x5B57;&#x7B26;&#x653E;&#x5230;&#x5185;&#x5B58;&#x4E2D;&#x5BF9;&#x5E94;&#x5C4F;&#x5E55;&#x663E;&#x793A;&#x7684;&#x4F4D;&#x7F6E;&#x53BB;&#x3002;</p>
+<p>&#x95EE;&#xFF1A;&#x600E;&#x4E48;&#x8BA1;&#x7B97;&#x5C4F;&#x5E55;&#x5750;&#x6807;&#xFF08;&#x884C;&#xFF1A;x&#xFF0C;&#x5217;&#xFF1A;y&#xFF09;&#x5BF9;&#x5E94;&#x7684;&#x5185;&#x5B58;&#x5730;&#x5740;&#xFF1F;
+&#x5728;&#x5F53;&#x524D;&#x7684;&#x663E;&#x793A;&#x6A21;&#x5F0F;&#x4E2D;&#xFF0C;&#x4E00;&#x884C;&#x5BBD;&#x5EA6;&#x4E3A;80&#x4E2A;&#x5B57;&#x7B26;&#xFF0C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x7684;&#x5BBD;&#x5EA6;&#x662F;8bit
+&#x5C4F;&#x5E55;&#x4F4D;&#x7F6E;(&#x884C;&#xFF1A;x&#xFF0C;&#x5217;&#xFF1A;y)&#x5BF9;&#x5E94;&#x7684;&#x5185;&#x5B58;&#x5730;&#x5740;&#x5C31;&#x662F;0xb8000+(80<em>(x-1)+y-1)</em>2&#x3002;
+&#x9700;&#x6C42;&#x4E2D;&#x6240;&#x63D0;&#x5230;&#x7684;&#x7B2C;&#x4E00;&#x884C;&#x4E2D;&#x95F4;&#xFF0C;&#x5C31;&#x662F;0xb8000+(80<em>0+39)</em>2&#x7684;&#x4F4D;&#x7F6E;&#x4E86;&#x3002;</p>
+<p>&#x95EE;&#xFF1A;&#x600E;&#x4E48;&#x8BBF;&#x95EE;&#x8FD9;&#x4E2A;&#x5730;&#x5740;&#x5462;&#xFF1F;
+&#x7B54;&#xFF1A;&#x6211;&#x4EEC;&#x628A;0xb800&#x4F5C;&#x4E3A;&#x6BB5;&#x57FA;&#x5740;&#xFF0C;(80<em>0+39)</em>2&#x4F5C;&#x4E3A;&#x6BB5;&#x504F;&#x79FB;&#xFF0C;&#x5C31;&#x521A;&#x597D;&#x5F97;&#x5230;&#x4E86;&#x8FD9;&#x4E2A;&#x5730;&#x5740;&#x3002;</p>
+<p>&#x65B0;&#x589E;&#x4EE3;&#x7801;wind_x86 _dos.ld&#x8BF4;&#x660E;
+&#x5B8C;&#x6574;&#x6E90;&#x7801;&#xFF1A;</p>
+<pre><code>SECTIONS
+{
+    . = 0x0100;
+    .text :
+    {
+        *(.text)
+    } = 0
+}
+</code></pre><p>&#x8BF4;&#x660E;&#xFF0C;&#x8FD9;&#x4E2A;&#x811A;&#x672C;&#x7684;&#x5185;&#x5BB9;&#x548C;wind_x86.ld&#x7684;&#x5185;&#x5BB9;&#x51E0;&#x4E4E;&#x4E00;&#x6837;&#x3002;&#x53EA;&#x9700;&#x8981;&#x89E3;&#x91CA;&#x4E3A;&#x4EC0;&#x4E48;&#x8D77;&#x70B9;&#x662F;0x0100&#x3002;
+&#x56E0;&#x4E3A;&#x5728;DOS&#x73AF;&#x5883;&#x52A0;&#x8C03;&#x8BD5;&#x6C47;&#x7F16;&#x4EE3;&#x7801;&#x65F6;&#x8981;&#x6C42;&#x8D77;&#x70B9;&#x662F;0x0100&#xFF0C;&#x8FD9;&#x4E48;&#x5199;&#x662F;&#x4E3A;&#x4E86;&#x517C;&#x5BB9;DOS&#x4E2D;&#x7684;&#x6C47;&#x7F16;&#x8C03;&#x8BD5;&#x73AF;&#x5883;&#x3002;</p>
+<div id="gitalk-container"></div>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="2015-06-15-load-sectors.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 3.加载其它扇区">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"4.跳出第一个扇区","level":"1.10","depth":1,"previous":{"title":"3.加载其它扇区","level":"1.9","depth":1,"path":"book/2015-06-15-load-sectors.md","ref":"book/2015-06-15-load-sectors.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","katex-plus","alerts","mygitalk","github","github-buttons","splitter","-sharing","sharing-plus","donate","copy-code-button","anchor-navigation-ex","sectionx","click-reveal"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/windmissing/baby_os"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"http://windmissing.github.io/images/2020/alipay.jpg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"http://windmissing.github.io/images/2020/weixin.jpg","wechatText":"微信打赏"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"click-reveal":{},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"katex-plus":{},"alerts":{},"github-buttons":{"repo":"windmissing/baby_os","types":["star","watch","fork"],"size":"small"},"copy-code-button":{},"mygitalk":{"flipMoveOptions":{},"clientID":"0e62aff052037ae065db","number":-1,"perPage":10,"proxy":"https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token","admin":["windmissing"],"createIssueManually":false,"distractionFreeMode":false,"repo":"baby_os","owner":"windmissing","enableHotKey":true,"clientSecret":"09272bea221c8596fcef4d6a10f9d501fc2f5c05","pagerDirection":"last","labels":["Gitalk"]},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"windmissing","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"3.2.3"},"file":{"path":"book/2015-06-17-jump-to-other-sectors.md","mtime":"2020-11-14T13:26:19.935Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-14T13:27:43.818Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+        
+    
+        
+        <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mygitalk/mygitalk.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-click-reveal/click_reveal.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

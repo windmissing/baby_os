@@ -1,0 +1,504 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3.加载其它扇区 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="windmissing">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex-plus/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-click-reveal/click_reveal.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="2015-06-17-jump-to-other-sectors.html" />
+    
+    
+    <link rel="prev" href="2015-06-08-more-logs.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"windmissing/baby_os","types":["star","watch","fork"],"size":"small"};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="2012-06-16-my-os-windows.html">
+            
+                <a href="2012-06-16-my-os-windows.html">
+            
+                    
+                    在bochs上运行的第一个操作系统（Windows版）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="2013-05-26-my-os-linux-operation-effect.html">
+            
+                <a href="2013-05-26-my-os-linux-operation-effect.html">
+            
+                    
+                    1.最简单的操作系统（linux版）（一）运行效果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="2013-05-15-my-os-development-env.html">
+            
+                <a href="2013-05-15-my-os-development-env.html">
+            
+                    
+                    开发环境说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="2015-05-15-my-os-makefile.html">
+            
+                <a href="2015-05-15-my-os-makefile.html">
+            
+                    
+                    1.最简单的操作系统（二）makefile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="2015-05-16-my-os-linker.html">
+            
+                <a href="2015-05-16-my-os-linker.html">
+            
+                    
+                    1.最简单的操作系统（三）链接脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="2015-05-16-my-os-boot.html">
+            
+                <a href="2015-05-16-my-os-boot.html">
+            
+                    
+                    1.最简单的操作系统（四）boot.S
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="2015-06-08-more-logs.html">
+            
+                <a href="2015-06-08-more-logs.html">
+            
+                    
+                    2.多一些打印
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9" data-path="2015-06-15-load-sectors.html">
+            
+                <a href="2015-06-15-load-sectors.html">
+            
+                    
+                    3.加载其它扇区
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="2015-06-17-jump-to-other-sectors.html">
+            
+                <a href="2015-06-17-jump-to-other-sectors.html">
+            
+                    
+                    4.跳出第一个扇区
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >3.加载其它扇区</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x80CC;&#x666F;&#xFF1A;
+&#x786C;&#x4EF6;&#x5728;&#x52A0;&#x7535;&#x81EA;&#x4E3E;&#x65F6;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x52A0;&#x8F7D;&#x7B2C;&#x4E00;&#x4E2A;&#x6247;&#x533A;&#x5230;&#x5185;&#x5B58;&#xFF0C;&#x5E76;&#x4ECE;&#x8FD9;&#x4E2A;&#x6247;&#x533A;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#x5F00;&#x59CB;&#x6267;&#x884C;&#x3002;
+&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x53EA;&#x8981;&#x628A;&#x9700;&#x8981;&#x6267;&#x884C;&#x7684;&#x4EE3;&#x7801;&#x653E;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;&#x6247;&#x533A;&#xFF0C;&#x518D;&#x6253;&#x5F00;&#x7535;&#x6E90;&#xFF0C;&#x6700;&#x7B80;&#x5355;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x5C31;&#x8FD0;&#x884C;&#x8D77;&#x6765;&#x4E86;&#x3002;
+&#x53EF;&#x662F;&#xFF0C;&#x786C;&#x4EF6;&#x53EA;&#x5E2E;&#x6211;&#x4EEC;&#x52A0;&#x8F7D;&#x7B2C;&#x4E00;&#x4E2A;&#x6247;&#x533A;&#xFF0C;&#x4EC5;&#x4EC5;512&#x5B57;&#x8282;&#x3002;
+&#x6211;&#x4EEC;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x73B0;&#x5728;&#x8FD8;&#x5F88;&#x5C0F;&#xFF0C;&#x4F46;&#x5B83;&#x4F1A;&#x6162;&#x6162;&#x957F;&#x5927;&#xFF0C;&#x8D85;&#x51FA;512&#x5B57;&#x8282;&#x7684;&#x9650;&#x5236;&#x4E5F;&#x662F;&#x8FDF;&#x65E9;&#x7684;&#x4E8B;&#x3002;
+&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x6709;&#x4E00;&#x90E8;&#x5206;&#x4EE3;&#x7801;&#x4F1A;&#x653E;&#x5230;&#x8F6F;&#x76D8;&#x7684;&#x5176;&#x5B83;&#x51E0;&#x4E2A;&#x6247;&#x533A;&#x3002;
+&#x8981;&#x6267;&#x884C;&#x5176;&#x5B83;&#x6247;&#x533A;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x5C31;&#x628A;&#x50CF;&#x5904;&#x7406;&#x7B2C;&#x4E00;&#x4E2A;&#x6247;&#x533A;&#x4E00;&#x6837;&#xFF0C;&#x628A;&#x5176;&#x5B83;&#x6247;&#x533A;&#x4E5F;&#x52A0;&#x8F7D;&#x5230;&#x5185;&#x5B58;&#xFF0C;&#x5E76;&#x8BA9;&#x63A7;&#x5236;&#x6743;&#x8DF3;&#x8F6C;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x4F4D;&#x7F6E;&#x3002;
+&#x5F88;&#x9057;&#x61BE;&#xFF0C;&#x8FD9;&#x4E9B;&#x6211;&#x4EEC;&#x8981;&#x81EA;&#x5DF1;&#x53BB;&#x5B9E;&#x73B0;&#x3002;&#x4ECA;&#x5929;&#x5148;&#x8BB2;&#x7B2C;&#x4E00;&#x6B65;&#xFF0C;&#x52A0;&#x8F7D;&#x6247;&#x533A;&#x3002;</p>
+<p>&#x9700;&#x6C42;&#xFF1A;
+&#x52A0;&#x8F7D;&#x7B2C;2-18&#x4E2A;&#x6247;&#x533A;&#x7684;&#x5185;&#x5BB9;&#x5230;&#x5185;&#x5B58;&#x7684;0x9000:0x0100&#x5904;&#x3002;
+&#x5229;&#x7528;&#xFF08;2.&#x591A;&#x4E00;&#x4E9B;&#x6253;&#x5370;&#xFF09;&#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x6709;&#x9009;&#x62E9;&#x5730;&#x6253;&#x5370;&#xFF1A;
+&#x52A0;&#x8F7D;&#x4E4B;&#x524D;&#x6253;&#x5370;&#x201C;loading**&#x201D;
+&#x5982;&#x679C;&#x52A0;&#x8F7D;&#x6210;&#x529F;&#xFF0C;&#x6253;&#x5370;&#x201D;loaded in&#x201D;
+&#x5982;&#x679C;&#x52A0;&#x8F7D;&#x5931;&#x8D25;&#xFF0C;&#x6253;&#x5370;&#x201D;no loader&#x201D;</p>
+<p>&#x6548;&#x679C;&#xFF1A;
+<img src="assets/2" alt=""></p>
+<p>&#x8BF4;&#x660E;&#xFF1A;
+&#xFF08;1&#xFF09;&#x4E3A;&#x4EC0;&#x4E48;&#x57FA;&#x5740;&#x662F;0x9000&#xFF1F;
+&#x56E0;&#x6B64;&#x6240;&#x53C2;&#x8003;&#x7684;0.12&#x5185;&#x6838;&#x6E90;&#x7801;&#x548C;&#x300A;&#x81EA;&#x5DF1;&#x52A8;&#x624B;&#x5199;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x300B;&#x4E2D;&#x7528;&#x7684;&#x90FD;&#x662F;&#x8FD9;&#x4E2A;&#x5730;&#x5740;&#xFF0C;&#x6240;&#x4EE5;&#x4E5F;&#x6CBF;&#x7528;&#x4E86;&#x8FD9;&#x4E2A;&#x5730;&#x5740;&#x3002;
+&#xFF08;2&#xFF09;&#x4E3A;&#x4EC0;&#x4E48;&#x504F;&#x79FB;&#x662F;0x0100&#xFF1F;
+&#x8FD9;&#x4E0E;&#x4E0B;&#x4E00;&#x8282;&#x8981;&#x8BB2;&#x7684;&#x5185;&#x5BB9;&#x76F8;&#x5173;&#xFF0C;&#x5C06;&#x5728;&#x4E0B;&#x4E00;&#x8282;&#x4E2D;&#x89E3;&#x91CA;&#x3002;
+&#xFF08;3&#xFF09;&#x771F;&#x5B9E;&#x7684;&#x7269;&#x7406;&#x5730;&#x5740;&#x662F;&#x591A;&#x5C11;&#xFF1F;
+&#x5728;&#x5B9E;&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x7269;&#x7406;&#x5730;&#x5740;=&#x6BB5;&#x5730;&#x5740;&lt;&lt;4+&#x6BB5;&#x504F;&#x79FB;&#x3002;
+&#x56E0;&#x6B64;&#x7269;&#x7406;&#x5730;&#x5740;&#x4E3A;0x90100</p>
+<p>&#x4FEE;&#x6539;&#x5C55;&#x793A;&#xFF1A;
+<img src="assets/3" alt="">
+&#x6B64;&#x5904;&#x7701;&#x7565;N&#x884C;
+<img src="assets/4" alt=""></p>
+<p>&#x4EE3;&#x7801;&#x8BF4;&#x660E;&#xFF1A;</p>
+<pre><code>load_system:
+</code></pre><p>&#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x6807;&#x7B7E;&#xFF0C;&#x7528;&#x4E8E;&#x8DF3;&#x8F6C;&#x6216;&#x8005;&#x9605;&#x8BFB;&#x65B9;&#x4FBF;&#x3002;</p>
+<pre><code>        mov     {% math_inline %}0x0000, %dx
+        mov     {% endmath_inline %}0x0002, %cx
+        mov     {% math_inline %}BaseOfLoader, %ax
+        mov     %ax, %es
+        mov     {% endmath_inline %}OffsetOfLoader, %bx
+        mov     {% math_inline %}0x200+{% endmath_inline %}SYSLEN, %ax
+        int     {% math_inline %}0x13
+</code></pre><p>&#x8C03;&#x7528;&#x4E86;BIOS&#x63D0;&#x4F9B;&#x7684;0x13&#x53F7;&#x4E2D;&#x65AD;&#x3002;&#x8BE5;&#x4E2D;&#x65AD;&#x7684;&#x4F5C;&#x7528;&#x662F;&#x8BFB;&#x5165;&#x6570;&#x636E;&#x5230;&#x5185;&#x5B58;&#x3002;
+&#x53EA;&#x8981;&#x6309;&#x7167;&#x8BE5;&#x4E2D;&#x65AD;&#x7684;&#x683C;&#x5F0F;&#x521D;&#x59CB;&#x5316;&#x5BC4;&#x5B58;&#x5668;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x8BFB;&#x5165;&#x6307;&#x5B9A;&#x533A;&#x57DF;&#x7684;&#x6570;&#x636E;&#x5230;&#x5185;&#x5B58;&#x7684;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#x3002;
+&#x53C2;&#x6570;&#xFF1A;
+AH 02&#xFF0C;&#x529F;&#x80FD;&#x53F7;
+AL &#x8BFB;&#x53D6;&#x6247;&#x533A;&#x6570; = 17
+CH &#x67F1;&#x9762; = &#x6247;&#x533A;&#x53F7; / 36 = 0
+CL &#x6247;&#x533A; = &#x6247;&#x533A;&#x53F7; % 18 = 2
+DH &#x78C1;&#x5934; = &#xFF08;&#x6247;&#x533A;&#x53F7; % 36&#xFF09; / 18 = 0
+DL &#x9A71;&#x52A8;&#x5668;&#xFF08;0x0 ~ 0x7f&#x8868;&#x793A;&#x8F6F;&#x76D8;&#xFF0C;0x80 ~ 0xff&#x8868;&#x793A;&#x786C;&#x76D8;&#xFF09;
+ES&#xFF1A;BX &#x7F13;&#x51B2;&#x533A;&#x5730;&#x5740;&#xFF0C;&#x5373;&#x6570;&#x636E;&#x8BFB;&#x5230;&#x8FD9;&#x91CC;
+&#x8FD4;&#x56DE;&#x503C;&#xFF1A;
+CF = 0&#x8868;&#x793A;&#x64CD;&#x4F5C;&#x6210;&#x529F;&#xFF0C;&#x6B64;&#x65F6;AH=0&#xFF0C;AL=&#x4F20;&#x8F93;&#x7684;&#x6247;&#x533A;&#x6570;
+CF = 1&#x5373;carry&#x4F4D;&#x7F6E;&#x4F4D;&#xFF08;&#x53EF;&#x7528;JC&#x8868;&#x793A;&#x8DF3;&#x8F6C;&#xFF09;&#x8868;&#x793A;&#x64CD;&#x4F5C;&#x5931;&#x8D25;&#xFF0C; AH=&#x72B6;&#x6001;&#x4EE3;&#x7801;</p>
+<pre><code>        int     {% endmath_inline %}0x13
+        jnc     ok_load
+        jmp     not_load
+</code></pre><p>&#x6839;&#x636E;&#x4E0A;&#x6587;&#x53EF;&#x77E5;&#xFF0C;int 0x13&#x662F;&#x5426;&#x6267;&#x884C;&#x6210;&#x529F;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;carry&#x5F97;&#x77E5;&#x3002;
+&#x6C47;&#x7F16;&#x6307;&#x4EE4;JC&#x548C;JNC&#x5C31;&#x662F;&#x9488;&#x5BF9;carry&#x7684;&#x503C;&#x6765;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x8DF3;&#x8F6C;&#x7684;&#x64CD;&#x4F5C;&#x3002;
+&#x5982;&#x679C;&#x6210;&#x529F;&#xFF0C;&#x8DF3;&#x8F6C;&#x5230;ok_load&#xFF0C;&#x5426;&#x5219;&#x8DF3;&#x8F6C;&#x5230;not _load
+ok_load&#x548C;not _load&#x7684;&#x64CD;&#x4F5C;&#x5206;&#x522B;&#x662F;&#x6253;&#x5370;&#x5404;&#x81EA;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<div id="gitalk-container"></div>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="2015-06-08-more-logs.html" class="navigation navigation-prev " aria-label="Previous page: 2.多一些打印">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="2015-06-17-jump-to-other-sectors.html" class="navigation navigation-next " aria-label="Next page: 4.跳出第一个扇区">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3.加载其它扇区","level":"1.9","depth":1,"next":{"title":"4.跳出第一个扇区","level":"1.10","depth":1,"path":"book/2015-06-17-jump-to-other-sectors.md","ref":"book/2015-06-17-jump-to-other-sectors.md","articles":[]},"previous":{"title":"2.多一些打印","level":"1.8","depth":1,"path":"book/2015-06-08-more-logs.md","ref":"book/2015-06-08-more-logs.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","katex-plus","alerts","mygitalk","github","github-buttons","splitter","-sharing","sharing-plus","donate","copy-code-button","anchor-navigation-ex","sectionx","click-reveal"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/windmissing/baby_os"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"http://windmissing.github.io/images/2020/alipay.jpg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"http://windmissing.github.io/images/2020/weixin.jpg","wechatText":"微信打赏"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"click-reveal":{},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"katex-plus":{},"alerts":{},"github-buttons":{"repo":"windmissing/baby_os","types":["star","watch","fork"],"size":"small"},"copy-code-button":{},"mygitalk":{"flipMoveOptions":{},"clientID":"0e62aff052037ae065db","number":-1,"perPage":10,"proxy":"https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token","admin":["windmissing"],"createIssueManually":false,"distractionFreeMode":false,"repo":"baby_os","owner":"windmissing","enableHotKey":true,"clientSecret":"09272bea221c8596fcef4d6a10f9d501fc2f5c05","pagerDirection":"last","labels":["Gitalk"]},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"windmissing","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"3.2.3"},"file":{"path":"book/2015-06-15-load-sectors.md","mtime":"2020-11-14T13:26:19.935Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-14T13:27:43.818Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+        
+    
+        
+        <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mygitalk/mygitalk.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-click-reveal/click_reveal.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,489 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>开发环境说明 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="windmissing">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex-plus/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-click-reveal/click_reveal.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="2015-05-15-my-os-makefile.html" />
+    
+    
+    <link rel="prev" href="2013-05-26-my-os-linux-operation-effect.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"windmissing/baby_os","types":["star","watch","fork"],"size":"small"};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="2012-06-16-my-os-windows.html">
+            
+                <a href="2012-06-16-my-os-windows.html">
+            
+                    
+                    在bochs上运行的第一个操作系统（Windows版）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="2013-05-26-my-os-linux-operation-effect.html">
+            
+                <a href="2013-05-26-my-os-linux-operation-effect.html">
+            
+                    
+                    1.最简单的操作系统（linux版）（一）运行效果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="2013-05-15-my-os-development-env.html">
+            
+                <a href="2013-05-15-my-os-development-env.html">
+            
+                    
+                    开发环境说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="2015-05-15-my-os-makefile.html">
+            
+                <a href="2015-05-15-my-os-makefile.html">
+            
+                    
+                    1.最简单的操作系统（二）makefile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="2015-05-16-my-os-linker.html">
+            
+                <a href="2015-05-16-my-os-linker.html">
+            
+                    
+                    1.最简单的操作系统（三）链接脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="2015-05-16-my-os-boot.html">
+            
+                <a href="2015-05-16-my-os-boot.html">
+            
+                    
+                    1.最简单的操作系统（四）boot.S
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="2015-06-08-more-logs.html">
+            
+                <a href="2015-06-08-more-logs.html">
+            
+                    
+                    2.多一些打印
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="2015-06-15-load-sectors.html">
+            
+                <a href="2015-06-15-load-sectors.html">
+            
+                    
+                    3.加载其它扇区
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="2015-06-17-jump-to-other-sectors.html">
+            
+                <a href="2015-06-17-jump-to-other-sectors.html">
+            
+                    
+                    4.跳出第一个扇区
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >开发环境说明</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x5728;&#x540E;&#x7EED;&#x7684;&#x6587;&#x7AE0;&#x4E2D;&#xFF0C;&#x5C06;&#x4E0D;&#x518D;&#x533A;&#x5206;linux&#x73AF;&#x5883;&#x8FD8;&#x662F;windows&#x73AF;&#x5883;&#x3002;&#x56E0;&#x4E3A;linux&#x73AF;&#x5883;&#x548C;windows&#x73AF;&#x5883;&#x7684;&#x533A;&#x522B;&#x53EA;&#x662F;&#x751F;&#x6210;.img&#x7684;&#x65B9;&#x5F0F;&#x4E0D;&#x540C;&#xFF0C;&#x4F46;&#x6700;&#x7EC8;&#x7684;&#x76EE;&#x7684;&#x90FD;&#x662F;&#x751F;&#x6210;.img&#x6587;&#x4EF6;&#x3002;
+linux&#x4E0B;&#x81EA;&#x5DF1;&#x5199;.ld&#x6587;&#x4EF6;&#x548C;makefile&#x6587;&#x4EF6;&#xFF0C;&#x628A;&#x6E90;&#x7801;&#x7F16;&#x8BD1;&#x94FE;&#x63A5;&#x6210;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#xFF0C;&#x6700;&#x540E;&#x901A;&#x8FC7;dd&#x751F;&#x6210;.img&#x3002;
+windows&#x4E0B;&#x4F7F;&#x7528;nasm&#x628A;&#x6C47;&#x7F16;&#x6E90;&#x7801;&#x7F16;&#x8BD1;&#x94FE;&#x63A5;&#x6210;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#xFF0C;&#x901A;&#x8FC7;WinImage&#x6216;UE&#x751F;&#x6210;.img&#x3002;
+&#x751F;&#x6210;&#x540E;&#x7684;.img&#x53EA;&#x8981;&#x7B26;&#x5408;&#x6807;&#x51C6;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x4EFB;&#x4F55;&#x865A;&#x62DF;&#x673A;&#x4E0A;&#x8DD1;&#xFF0C;&#x6BD4;&#x5982;bochs&#x3001;virtualbox&#x3002;&#x53EA;&#x4E0D;&#x8FC7;&#x4E0D;&#x540C;&#x7684;&#x865A;&#x62DF;&#x673A;&#x4E2A;&#x6709;&#x4F18;&#x7F3A;&#x70B9;&#xFF0C;&#x5728;&#x4E8E;&#x81EA;&#x5DF1;&#x7684;&#x53D6;&#x820D;&#x3002;&#x5E76;&#x4E0D;&#x662F;&#x4E00;&#x5B9A;&#x8981;&#x6309;&#x7167;&#x524D;&#x6587;&#x4E2D;&#x6240;&#x7ED9;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5728;windows&#x4E0A;&#x4E00;&#x5B9A;&#x8981;&#x7528;bochs&#x6216;&#x5728;linux&#x4E0A;&#x4E00;&#x5B9A;&#x8981;&#x7528;virtualbox&#x3002;</p>
+<p>&#x300A;&#x8FD0;&#x884C;&#x81EA;&#x5DF1;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x300B;&#x7CFB;&#x5217;&#x540E;&#x7EED;&#x7684;&#x6587;&#x7AE0;&#x90FD;&#x662F;&#x57FA;&#x4E8E;&#x4EE5;&#x4E0B;&#x65B9;&#x5F0F;&#x5F00;&#x53D1;&#x7684;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x7F16;&#x8BD1;</td>
+<td>linux&#x7CFB;&#x7EDF;</td>
+<td>g++</td>
+</tr>
+<tr>
+<td>&#x94FE;&#x63A5;</td>
+<td>linux&#x7CFB;&#x7EDF;</td>
+<td>ld</td>
+</tr>
+<tr>
+<td>&#x751F;&#x6210;&#x955C;&#x50CF;&#x6587;&#x4EF6;    linux&#x7CFB;&#x7EDF;    dd</td>
+</tr>
+<tr>
+<td>&#x8C03;&#x8BD5;</td>
+<td>windows&#x7CFB;&#x7EDF;</td>
+<td>bochs</td>
+</tr>
+<tr>
+<td>&#x8FD0;&#x884C;</td>
+<td>windows&#x7CFB;&#x7EDF;</td>
+<td>virtualbox</td>
+</tr>
+</tbody>
+</table>
+<p>&#x53C2;&#x52A0;&#x6587;&#x732E;&#xFF1A;
+&#x300A;write-os-weekly&#x300B;
+&#x300A;30&#x5929;&#x81EA;&#x5236;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x300B;
+&#x300A;linux&#x5185;&#x6838;&#x5B8C;&#x5168;&#x5256;&#x6790;&#x300B;   </p>
+<div id="gitalk-container"></div>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="2013-05-26-my-os-linux-operation-effect.html" class="navigation navigation-prev " aria-label="Previous page: 1.最简单的操作系统（linux版）（一）运行效果">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="2015-05-15-my-os-makefile.html" class="navigation navigation-next " aria-label="Next page: 1.最简单的操作系统（二）makefile">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"开发环境说明","level":"1.4","depth":1,"next":{"title":"1.最简单的操作系统（二）makefile","level":"1.5","depth":1,"path":"book/2015-05-15-my-os-makefile.md","ref":"book/2015-05-15-my-os-makefile.md","articles":[]},"previous":{"title":"1.最简单的操作系统（linux版）（一）运行效果","level":"1.3","depth":1,"path":"book/2013-05-26-my-os-linux-operation-effect.md","ref":"book/2013-05-26-my-os-linux-operation-effect.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","katex-plus","alerts","mygitalk","github","github-buttons","splitter","-sharing","sharing-plus","donate","copy-code-button","anchor-navigation-ex","sectionx","click-reveal"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/windmissing/baby_os"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"http://windmissing.github.io/images/2020/alipay.jpg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"http://windmissing.github.io/images/2020/weixin.jpg","wechatText":"微信打赏"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"click-reveal":{},"sectionx":{},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"katex-plus":{},"alerts":{},"github-buttons":{"repo":"windmissing/baby_os","types":["star","watch","fork"],"size":"small"},"copy-code-button":{},"mygitalk":{"flipMoveOptions":{},"clientID":"0e62aff052037ae065db","number":-1,"perPage":10,"proxy":"https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token","admin":["windmissing"],"createIssueManually":false,"distractionFreeMode":false,"repo":"baby_os","owner":"windmissing","enableHotKey":true,"clientSecret":"09272bea221c8596fcef4d6a10f9d501fc2f5c05","pagerDirection":"last","labels":["Gitalk"]},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"windmissing","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"3.2.3"},"file":{"path":"book/2013-05-15-my-os-development-env.md","mtime":"2020-11-14T13:26:19.935Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-14T13:27:43.818Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+        
+    
+        
+        <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mygitalk/mygitalk.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-click-reveal/click_reveal.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
